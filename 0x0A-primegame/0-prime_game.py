@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 "Prime game function to determine winner between players"
 
-def sieve_of_eratosthenes(n):
+def computes_all_prime(n: int) -> int:
     """ Helper function to find all primes up to n using the Sieve of Eratosthenes """
     primes = [True] * (n + 1)
     primes[0] = primes[1] = False
@@ -11,13 +11,13 @@ def sieve_of_eratosthenes(n):
                 primes[j] = False
     return primes
 
-def isWinner(x, nums):
+def isWinner(x: int, nums: int) -> int:
     """ Determine the winner after x rounds of prime game """
     if x < 1 or not nums:
         return None
 
     max_n = max(nums)
-    primes = sieve_of_eratosthenes(max_n)
+    primes = computes_all_prime(max_n)
     
     # Precompute number of primes up to each number
     prime_count = [0] * (max_n + 1)
