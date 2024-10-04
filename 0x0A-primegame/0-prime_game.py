@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"Prime game function to determine winner between players"
 
 def sieve_of_eratosthenes(n):
     """ Helper function to find all primes up to n using the Sieve of Eratosthenes """
